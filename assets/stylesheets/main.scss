@@ -3,11 +3,18 @@
 @import "globals/bourbon_fix";
 
 // Import global base styles
+@import "globals/variables";
+@import "globals/lib";
+@import "globals/reset";
+@import "globals/sprites";
 @import "globals/base";
 
 // Header & Footer
 @import "sections/header";
 @import "sections/footer";
 
+
 // Pages
 @import "pages/home";
+@import "pages/category";
+@import "pages/product";

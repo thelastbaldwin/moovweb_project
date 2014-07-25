@@ -1,3 +1,108 @@
-header.mw-header {
-  
+#Logo{
+	h1{
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size: 1.2rem;
+
+		a{
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+}
+
+#Header{
+	@include background-image(linear-gradient(top, #B93B15 0%, #B73D14 100%));
+}
+
+#LogoContainer{
+	float: left;
+	padding: 10px;
+}
+
+#TopMenu{
+	float: right;
+
+	li{
+		display: inline-block;
+		margin-right: 5px;
+		a{
+			display: block;
+			overflow: hidden;
+			text-indent: -9999px;
+		}
+
+		&.CartLink{
+			a{
+				@include sprites-cart;
+			}
+			
+		}
+
+		&.Account{
+			a{
+				@include sprites-user;
+			}
+		}
+	}
+}
+
+#SearchForm{
+	clear: both;
+	position: relative;
+	@include background-image(linear-gradient(top, #741f07 0%, #6a1c06 100%));
+	padding: 5px 10px;
+
+	input{
+		vertical-align: bottom;
+	}
+
+	input[type="text"]{
+		margin: 0;
+		height: 2.1em;
+		padding: 0.25em;
+	}
+
+	input[type="button"]{
+		@include sprites-search;
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+#Menu{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 1;
+
+	.CategoryList{
+		margin-top: $menuHeight + 5px;
+		padding: 10px;
+		background-color: #6a1c06;
+		color: #fff;
+
+		ul{
+			padding-left: 0.5em;
+			margin-bottom: 1em;
+		}
+
+		a{
+			color: #efefef;
+			text-decoration: none;
+			text-indent: 0.5em;
+			font-size: 0.75em;
+
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.menu-toggle{
+	@include sprites-menu;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
